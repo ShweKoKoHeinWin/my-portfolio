@@ -88,16 +88,19 @@ a{
 
 /* start dark light */
 .dark-light {
+    width: max-content;
     background-color: var(--color-rose);
     border-radius: 10px;
     border: 2px solid var(--color-green);
     color: var(--color-white);
-    position: fixed;
+    align-self: flex-end;
+    /* position: fixed;
     top: min(32px, 10vh);
     right: min(10vw, 1.5rem);
     transform: translate(0, -50%);
+    
+    z-index: 1000; */
     padding: .25rem;
-    z-index: 1000;
     cursor: pointer;
     transition: .3s;
 }
@@ -109,11 +112,9 @@ a{
     background-color: var(--color-white);
     position: relative;
     transition: .3s;
+    cursor: pointer;
 }
 
-.fa-sun {
-    color: var(--color-green);
-}
 
 .circle {
     width: 15px;
@@ -134,13 +135,13 @@ a{
 
 /* start main-nav */
 .main-nav {
+    width: 100px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     position: fixed;
     right: min(10vw, 1.5rem);
-    top: 30%;
-    transform: translate(0, -50%);
+    top: 2rem;
     z-index: 1000;
 }
 
