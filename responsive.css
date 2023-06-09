@@ -1,0 +1,118 @@
+/* Over 1200px */
+@media (min-width: 1200px) {
+
+
+    .projects-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .layout .items figure {
+        max-width: min(60vw,700px);
+    }
+
+}
+
+
+/* Max width 992px */
+
+@media (max-width: 992px) {
+
+
+    .projects-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+  
+    .layout .items.hybird {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text text'
+                             'img1 img2';
+        justify-content: center;
+        align-items: center;
+    }
+
+    .layout .items figure {
+        max-width: 100%;
+    }
+
+    .fig1 {
+        grid-area: img1;
+    }
+    .fig1 img {
+        width: 100%;
+    }
+
+    .fig2 {
+        grid-area: img2;
+    }
+    .fig2 img {
+        width: 100%;
+    }
+
+    .item-explaination{
+        grid-area: text;
+    }
+}
+
+
+/* Max width 768px */
+@media (max-width: 768px) {
+    body {
+        --fs-sm: 1rem;
+        --fs-md: 1.2rem;
+        --fs-lg: 1.7rem;
+    }
+
+    .about-layout {
+        grid-template-areas: 
+                             'mystory mystory mystory mystory'
+                             'img img myskill myskill'
+                             'mydetail mydetail mydetail mydetail';
+    }
+
+    .layout .items {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .layout .items .item-explaination  {
+        order: 1;
+        text-align: center;
+    }
+
+    .layout .items figure {
+        order: 2;
+    }
+
+
+    .layout .items.hybird {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text text'
+                             'img1 img1'
+                             'img2 img2';
+    }
+}
+
+
+/* Max width 576 */
+@media (max-width: 576px) {
+    body {
+        --fs-sm: .8rem;
+        --fs-md: 1rem;
+        --fs-lg: 1.5rem;
+    }
+
+    .projects-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-layout {
+        grid-template-areas: 
+                             'mystory mystory mystory mystory'
+                             'img img myskill myskill'
+                             'mydetail mydetail mydetail mydetail';
+    }
+}

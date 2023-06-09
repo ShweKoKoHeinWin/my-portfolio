@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    --color-white: #d2f7e8;
+    --color-rose: #FF4500;
+    --color-green: orange;
+    --color-shadow: rgba(0,0,0,0.1);
+    --color-dark: #1b1e28;
+    --color-black: rgba(0,0,0,0.5);
+
+    --fw-bolder: 900;
+    --fw-bold: 700;
+
+    --fs-sm: 1rem;
+    --fs-md: 1.5rem;
+    --fs-lg: 2rem;
+
+    position: relative;
+    background-attachment: fixed;
+    background-color: var(--color-white);
+    background-image: url('./images/day.jpg'),linear-gradient(135deg, var(--color-white), var(--color-black));
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+
+.object {
+    position: fixed;
+    top: min(10%, 50px);
+    z-index: 0;
+}
+
+.container {
+    padding: min(10vw, 3rem);
+    position: relative;
+}
+
+.btn {
+    font-size: var(--fs-md);
+    display: inline-block;
+    padding: .5rem .75rem;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color-dark);
+    text-decoration: none;
+    margin: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--color-rose);
+    color: var(--color-white);
+    transform: scale(1.04);
+}
+
+img {
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.object {
+    width: min(10vw, 100px);
+    height: min(10vw, 100px);
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: -1;
+}
+.object:hover {
+    transform: scale(1.1);
+}
+
+
+/* start dark light */
+.dark-light {
+    background-color: var(--color-rose);
+    border-radius: 10px;
+    border: 2px solid var(--color-green);
+    color: var(--color-white);
+    position: fixed;
+    top: min(32px, 10vh);
+    right: min(10vw, 1.5rem);
+    transform: translate(0, -50%);
+    padding: .25rem;
+    z-index: 1000;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dark-light-toggler {
+    border-radius: 10px;
+    display: inline-block;
+    width: 30px;
+    background-color: var(--color-white);
+    position: relative;
+    transition: .3s;
+}
+
+.fa-sun {
+    color: var(--color-green);
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-green);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: .3s;
+}
+
+.dark-light-check {
+    visibility: hidden;
+}
+/* end dark light */
+
+/* start main-nav */
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    right: min(10vw, 1.5rem);
+    top: 30%;
+    transform: translate(0, -50%);
+    z-index: 1000;
+}
+
+.nav-item {
+    background: var(--color-green);
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav-item .nav-logo {
+    display: inline-block;
+    color: var(--color-white);
+    background-color: var(--color-rose);
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+    padding: .5rem;
+}
+.nav-item .nav-title {
+    color: var(--color-white);
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.3s linear, opacity 0.3s;
+    align-self: center;
+}
+
+.nav-item:hover .nav-title {
+    max-width: 100%;
+    opacity: 1;
+    transition: max-width 0.3s linear, opacity 0.3s;
+}
+/* end main-nav */
+
+
+/* Hero */
+.page1 {
+    height: 100vh;
+}
+
+.hero {
+    background: var(--color-shadow);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+    color: var(--color-dark);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    padding: 2rem;
+    text-align: center;
+    width: min(70%, 600px);
+}
+
+.highlight1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bolder);
+    color: var(--color-rose);
+}
+
+
+/* Projects */
+
+.project {
+    background: var(--color-white);
+    color: var(--color-dark);
+    padding-bottom: 0;
+}
+
+.project h2 {
+    text-align: center;
+    color: var(--color-dark);
+    font-size: var(--fs-lg);
+    margin-bottom: 3rem;
+}
+
+.projects-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.project-item {
+    width: 100%;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .project-link {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.description {
+    font-size: var(--fs-sm);
+    background: var(--color-white);
+    position: absolute;
+    padding: .5rem;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    transition: .3s;
+    z-index: 2;
+}
+
+.project-item:hover .description {
+    bottom: 50%;
+    opacity: 1;
+}
+
+.project-item:hover .project-link {
+    border: 1px solid var(--color-dark);
+}
+
+.project-item:hover img {
+    opacity: .7;
+}
+
+.divider {
+    border-color: var(--color-dark);
+    margin: 2rem 0 0 0;
+}
+
+/* About */
+.about {
+    background: var(--color-white);
+    color: var(--color-dark);
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 'mystory mystory mystory img'
+    'mydetail mydetail mydetail myskill';
+    grid-gap: 2rem;
+    line-height: 1.5;
+    align-items: center;
+}
+
+.myimg {
+    grid-area: img;
+}
+
+.myimage {
+    width: 100%;
+    border: 1px solid var(--color-dark);
+    border-radius: 30%;
+    background: var(--color-green);
+}
+
+.mystory {
+    grid-area: mystory;
+    font-size: var(--fs-md);
+}
+.mystory h2 {
+    text-align: center;
+}
+.mystory p{
+    text-indent: 3rem;
+}
+
+.mydetail {
+    grid-area: mydetail;
+}
+
+.mydetail table {
+    font-size: var(--fs-md);
+    width: 100%;
+    text-align: left;
+    line-height: 1.5;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    padding: 1rem;
+}
+.mydetail table th, .mydetail table td {
+    vertical-align: top;
+}
+
+
+.myskills {
+    grid-area: myskill;
+    font-size: var(--fs-sm);
+    justify-self: center;
+    text-align: center;
+}
+.myskills li {
+    list-style: none;
+}
+
+
+/* project-detail */
+body.project-detail {
+    background-image: linear-gradient(120deg, var(--color-black), var(--color-white)) !important;
+    color: var(--color-dark);
+}
+
+
+body.project-detail h1 {
+    font-size: var(--fs-lg);
+    text-align: center;
+    margin-block: 1.5rem;
+}
+
+body.project-detail h2 {
+    width: max-content;
+    background-color: var(--color-white);
+    font-size: var(--fs-md);
+    text-align: center;
+    padding: .25rem .5rem;
+    margin-block: 1rem;
+    margin: auto;
+}
+
+body.project-detail h3 {
+    font-size: calc(var(--fs-md) * .9);
+    text-align: center;
+    margin-block: .5rem;
+}
+
+.project-overview {
+    font-size: var(--fs-md);
+    width: min(60vw, 600px);
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.layout {
+    margin-block: 3rem;
+}
+
+.layout .items {
+    display: flex;
+    gap: 3rem;
+    margin-block: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-explaination {
+    font-size: calc(var(--fs-sm) * 1.2);
+    margin: auto;
+}
+
+.layout .items figure {
+    max-width: min(60vw,700px);
+}
+
+.layout .items figure img:hover {
+    outline: 1px solid var(--color-rose);
+}
+
+
+/* Preview Image */
+.imgbox {
+    position: fixed;
+    background: var(--color-white);
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+}
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+.imgframe {
+    width: min(100%, 1000px);
+    margin: auto;
+}
+
+.closebtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-green);
+}
+
+.imgframe img {
+    width: 100%;
+}
